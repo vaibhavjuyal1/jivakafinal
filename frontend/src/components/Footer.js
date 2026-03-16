@@ -39,16 +39,16 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Connect</h4>
             <div className="social-icons">
-              <a href="#" aria-label="Facebook" className="social-icon">📘</a>
-              <a href="#" aria-label="Twitter" className="social-icon">🐦</a>
-              <a href="#" aria-label="LinkedIn" className="social-icon">💼</a>
-              <a href="#" aria-label="Instagram" className="social-icon">📷</a>
+              <a href="/" aria-label="Facebook" className="social-icon">📘</a>
+              <a href="/" aria-label="Twitter" className="social-icon">🐦</a>
+              <a href="/" aria-label="LinkedIn" className="social-icon">💼</a>
+              <a href="/" aria-label="Instagram" className="social-icon">📷</a>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 Jivaka – Empowering Health Through AI.</p>
+          <p>© 2025 Jivaka - Empowering Health Through AI.</p>
         </div>
       </div>
     </footer>

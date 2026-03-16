@@ -76,7 +76,7 @@ useEffect(() => {
   } else {
     alert("Your browser does not support speech synthesis.");
   }
-}, []);
+}, [handleSendMessage]);
 
 
   // ✅ Send message to backend
