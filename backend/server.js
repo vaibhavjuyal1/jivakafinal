@@ -23,11 +23,29 @@ const PORT = process.env.PORT || 5000;
 
 
 
-const corsOptions = {
-  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://jivakafinal-8jdr.vercel.app",
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    // allow main domain + all Vercel preview URLs
+    if (
+      allowedOrigins.includes(origin) ||
+      origin.includes("vercel.app")
+    ) {
+      return callback(null, true);
+    }
+
+    return callback(new Error("Not allowed by CORS"));
+  },
   methods: ["GET", "POST"],
   credentials: true,
-};
+}));
 
 
 app.use(cors(corsOptions));
